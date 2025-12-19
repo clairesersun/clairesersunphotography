@@ -1,0 +1,15 @@
+# =============================================================================
+# ROBOTS.TXT - Claire Sersun Photography
+# =============================================================================
+# This file tells search engine crawlers which pages to index.
+# For more information: https://developers.google.com/search/docs/crawling-indexing/robots/intro
+
+# Allow all search engines to crawl all pages
+User-agent: *
+Allow: /
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://www.clairesersun.com/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1

@@ -1,0 +1,74 @@
+/**
+ * =============================================================================
+ * PRESS PAGE STYLES
+ * =============================================================================
+ */
+
+.press {
+  padding: 48px;
+}
+
+.press h1 {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 40px;
+  letter-spacing: 0.01em;
+}
+
+/* =============================================================================
+   PRESS SECTIONS
+   ============================================================================= */
+
+.press-section {
+  margin-bottom: 36px;
+  max-width: 650px;
+}
+
+.press-section h2 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.press-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.press-section li {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  font-size: 0.95rem;
+}
+
+.press-section__year {
+  color: var(--color-text-tertiary);
+  font-size: 0.85rem;
+}
+
+.press-section a {
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.press-section a:hover {
+  color: var(--color-text);
+}
+
+/* =============================================================================
+   MOBILE
+   ============================================================================= */
+
+@media (max-width: 860px) {
+  .press {
+    padding: 24px 20px;
+  }
+}

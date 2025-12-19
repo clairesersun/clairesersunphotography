@@ -1,0 +1,25 @@
+/**
+ * =============================================================================
+ * THEME TOGGLE STYLES
+ * =============================================================================
+ */
+
+.theme-toggle {
+  color: var(--color-text-secondary);
+  padding: 8px;
+  margin: -8px;
+  transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.theme-toggle:hover {
+  color: var(--color-text);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}

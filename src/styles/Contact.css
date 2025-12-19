@@ -1,0 +1,66 @@
+/**
+ * =============================================================================
+ * CONTACT PAGE STYLES
+ * =============================================================================
+ */
+
+.contact {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.contact h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 12vw, 7rem);
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 24px;
+  letter-spacing: 0.01em;
+}
+
+.contact__subheadline {
+  color: var(--color-text-secondary);
+  margin-bottom: 48px;
+}
+
+.contact__email {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  transition: opacity var(--transition-fast);
+}
+
+.contact__email:hover {
+  opacity: 0.6;
+}
+
+.contact__instagram {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 48px;
+  transition: opacity var(--transition-fast);
+}
+
+.contact__instagram:hover {
+  opacity: 0.6;
+}
+
+.contact__location {
+  font-size: 0.9rem;
+  color: var(--color-text-tertiary);
+}
+
+/* =============================================================================
+   MOBILE
+   ============================================================================= */
+
+@media (max-width: 860px) {
+  .contact {
+    padding: 24px 20px;
+    min-height: calc(100vh - var(--mobile-header-height));
+  }
+}

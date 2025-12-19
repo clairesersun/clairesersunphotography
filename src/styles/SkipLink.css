@@ -1,0 +1,25 @@
+/**
+ * =============================================================================
+ * SKIP LINK STYLES
+ * =============================================================================
+ * 
+ * Accessibility feature - hidden until focused.
+ * WCAG 2.1 Success Criterion 2.4.1 Bypass Blocks
+ */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  padding: 12px 20px;
+  background: var(--color-text);
+  color: var(--color-bg);
+  z-index: 9999;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 16px;
+}

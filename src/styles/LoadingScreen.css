@@ -1,0 +1,99 @@
+/**
+ * =============================================================================
+ * LOADING SCREEN STYLES
+ * =============================================================================
+ * 
+ * Animated intro with falling images.
+ */
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg);
+  z-index: var(--z-loader);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease;
+}
+
+.loading-screen--fading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* =============================================================================
+   FALLING IMAGES
+   ============================================================================= */
+
+.loading-screen__images {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.loading-screen__image {
+  position: absolute;
+  width: 140px;
+  left: var(--image-x);
+  top: var(--image-y);
+  transform: rotate(var(--image-rotation)) translateY(0);
+  opacity: 0;
+  transition: 
+    transform 2s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.6s ease;
+  transition-delay: var(--image-delay);
+}
+
+.loading-screen__image--falling {
+  transform: rotate(var(--image-rotation)) translateY(120vh);
+  opacity: 1;
+}
+
+.loading-screen__image img {
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* =============================================================================
+   TEXT
+   ============================================================================= */
+
+.loading-screen__text {
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease 0.5s;
+}
+
+.loading-screen__text--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.loading-screen__name {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* =============================================================================
+   REDUCED MOTION
+   ============================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-screen__image {
+    transition: none;
+    opacity: 1;
+    transform: rotate(var(--image-rotation)) translateY(50vh);
+  }
+  
+  .loading-screen__text {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
