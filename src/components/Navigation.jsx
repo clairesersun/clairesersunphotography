@@ -105,7 +105,7 @@ const Navigation = ({
    * Render a navigation group
    */
   const renderNavGroup = (items, isFirstGroup = false) => (
-    <ul className="nav-group" role="list">
+    <ul className="nav-group">
       {items.map(({ id, label }, index) => {
         const isActive = currentPage === id;
         const isFirstLink = isFirstGroup && index === 0;

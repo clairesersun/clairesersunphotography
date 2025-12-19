@@ -43,9 +43,6 @@ import {
   isProject 
 } from './data';
 
-// Styles
-import './styles/global.css';
-
 /**
  * Main App component
  */
