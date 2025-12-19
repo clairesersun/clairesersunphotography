@@ -2,14 +2,14 @@
  * =============================================================================
  * Navigation Component
  * =============================================================================
- * 
+ *
  * Sidebar navigation with responsive mobile drawer.
- * 
+ *
  * STRUCTURE:
  * - Desktop: Fixed sidebar on left (always visible)
  * - Mobile: Hidden drawer that slides in from left
  * - Mobile header bar with hamburger toggle
- * 
+ *
  * ACCESSIBILITY FEATURES:
  * - Semantic <nav> element with aria-label
  * - aria-current="page" on active link
@@ -17,15 +17,15 @@
  * - aria-controls linking toggle to nav
  * - Keyboard navigation support
  * - Focus management on mobile open/close
- * 
+ *
  * @module components/Navigation
  */
 
 import React, { useCallback, useRef, useEffect } from 'react';
-import { 
-  portfolioCategories, 
-  projectCategories, 
-  secondaryPages 
+import {
+  portfolioCategories,
+  projectCategories,
+  secondaryPages
 } from '../data';
 import ThemeToggle from './ThemeToggle';
 import '../styles/Navigation.css';
@@ -42,7 +42,7 @@ const ActiveDot = () => (
 
 /**
  * Navigation component
- * 
+ *
  * @param {Object} props
  * @param {string} props.currentPage - ID of current page
  * @param {Function} props.setPage - Function to navigate to page
